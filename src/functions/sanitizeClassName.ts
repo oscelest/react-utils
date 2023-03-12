@@ -11,6 +11,7 @@ export function sanitizeClassName(...args: Argument[]): string {
           className = className.substring(1);
         }
         className = className.replace(/^[^_a-zA-Z0-9-]/g, "");
+        result.push(className);
       }
     }
   }
