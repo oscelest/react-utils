@@ -2,7 +2,7 @@ export function sanitizeClassName(...args: Argument[]): string {
   const result = [] as string[];
   for (let arg of args) {
     if (Array.isArray(arg)) {
-      sanitizeClassName(...arg);
+      result.push(sanitizeClassName(...arg));
     }
     else if (arg) {
       const classes = arg.split(/\s+/);
